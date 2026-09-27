@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_app/utils/app_colors.dart/app_colors.dart';
+import 'package:flutter_shop_app/utils/widgets/custom_app_bar.dart';
 import 'package:flutter_shop_app/utils/widgets/custom_button.dart';
 import 'package:flutter_shop_app/utils/widgets/custom_text_form_field.dart';
 
@@ -9,20 +9,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        backgroundColor: AppColors.primary,
-        title: const Text(
-          'Forgot Password',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
+      appBar: const CustomAppBar(title: 'Forgot Password', centerTitle: true),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

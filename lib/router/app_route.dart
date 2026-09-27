@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/login/view/forget_password_screen.dart';
 import 'package:flutter_shop_app/login/view/login_screen.dart';
+import 'package:flutter_shop_app/products/view/product_view.dart';
 
 class AppRoutes {
-  static const String login = '/ogin';
+  static const String login = '/login';
   static const String forgetPassword = '/forget_password';
+  static const String productView = '/product_view';
 }
 
 class AppRouter {
@@ -14,6 +16,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case AppRoutes.forgetPassword:
         return MaterialPageRoute(builder: (_) => const ForgetPassword());
+      case AppRoutes.productView:
+        return MaterialPageRoute(builder: (_) => const ProductView());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

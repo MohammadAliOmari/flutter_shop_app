@@ -87,7 +87,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                CustomButton(onPressed: () {}, text: 'Login'),
+                CustomButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                      context,
+                      AppRoutes.productView,
+                    );
+                  },
+                  text: 'Login',
+                ),
                 const SizedBox(height: 40),
                 const Text.rich(
                   TextSpan(
