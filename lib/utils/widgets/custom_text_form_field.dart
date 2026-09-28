@@ -24,6 +24,8 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      validator: validator,
+      controller: controller,
       obscureText: isHide,
       obscuringCharacter: '*',
       style: const TextStyle(
@@ -55,6 +57,7 @@ class CustomTextFormField extends StatelessWidget {
               )
             : null,
         labelText: labelText,
+        errorMaxLines: 2,
 
         prefixIcon: Icon(prefixIcon, size: 28),
         errorBorder: OutlineInputBorder(
