@@ -23,7 +23,7 @@ List<ProductModel> productData = [
     inStock: true,
     price: 60,
     imageUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTv4lahrkjd5HndaAwRf9KM9GgTS-8u58ctDtsTImKgtYhvK7oYqbal1o&s=10',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYtSUkBtOjuK65kKSRP0O7LCi9nvXU28XoxcFRf2strGtGcM03pQARLxw&s=10',
   ),
   ProductModel(
     id: '3',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/regex/app_regex.dart';
 import 'package:flutter_shop_app/router/app_route.dart';
-import 'package:flutter_shop_app/utils/app_colors.dart/app_colors.dart';
+import 'package:flutter_shop_app/utils/app_colors/app_colors.dart';
 import 'package:flutter_shop_app/utils/widgets/custom_button.dart';
 import 'package:flutter_shop_app/utils/widgets/custom_text_form_field.dart';
 

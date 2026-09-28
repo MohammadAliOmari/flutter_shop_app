@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/products/model/product_model.dart';
 import 'package:flutter_shop_app/products/view/widgets/product_grid_item.dart';
 import 'package:flutter_shop_app/products/view_model/product_view_model.dart';
+import 'package:flutter_shop_app/router/app_route.dart';
 
 class ProductGridView extends StatelessWidget {
   const ProductGridView({super.key});
@@ -19,7 +20,16 @@ class ProductGridView extends StatelessWidget {
       itemCount: productData.length, // Replace with your product count
       itemBuilder: (context, index) {
         final ProductModel products = productData[index];
-        return ProductGridItem(products: products);
+        return GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              AppRoutes.productDetaillsView,
+              arguments: products,
+            );
+          },
+          child: ProductGridItem(products: products),
+        );
       },
     );
   }

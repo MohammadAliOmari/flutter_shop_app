@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_shop_app/products/view/widgets/product_grid_view.dart';
 import 'package:flutter_shop_app/products/view/widgets/product_list_view.dart';
 
-import 'package:flutter_shop_app/utils/app_colors.dart/app_colors.dart';
+import 'package:flutter_shop_app/utils/app_colors/app_colors.dart';
 import 'package:flutter_shop_app/utils/widgets/custom_app_bar.dart';
 
 class ProductView extends StatefulWidget {
@@ -27,7 +29,12 @@ class _ProductViewState extends State<ProductView> {
         centerTitle: false,
         hasBackButton: false,
         actions: [
-          const Icon(Icons.search, color: Colors.white, size: 30),
+          GestureDetector(
+            onTap: () {
+              log('Search');
+            },
+            child: const Icon(Icons.search, color: Colors.white, size: 30),
+          ),
           const SizedBox(width: 20),
           Container(
             padding: const EdgeInsets.all(8),
