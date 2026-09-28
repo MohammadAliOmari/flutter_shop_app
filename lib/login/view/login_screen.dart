@@ -114,7 +114,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   CustomButton(
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        Navigator.pushNamed(context, AppRoutes.productView);
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          AppRoutes.productView,
+                          (route) => false,
+                        );
                       }
                       // Navigator.pushNamed(context, AppRoutes.productView);
                     },

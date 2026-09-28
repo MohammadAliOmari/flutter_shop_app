@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_app/login/view/login_screen.dart';
 import 'package:flutter_shop_app/router/app_route.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Shop App',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.generateRoute,
-      initialRoute: AppRoutes.login,
+      home: LoginScreen(),
     );
   }
 }

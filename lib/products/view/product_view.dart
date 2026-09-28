@@ -39,7 +39,7 @@ class _ProductViewState extends State<ProductView> {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: isGridView ? Colors.white60 : Colors.white30,
+              color: Colors.white54,
               borderRadius: BorderRadius.circular(8),
             ),
             child: GestureDetector(
@@ -49,12 +49,12 @@ class _ProductViewState extends State<ProductView> {
                 });
               },
               child: isGridView
-                  ? const Icon(
+                  ? const Icon(Icons.list, color: AppColors.primary, size: 30)
+                  : const Icon(
                       Icons.grid_view_outlined,
                       color: AppColors.primary,
                       size: 30,
-                    )
-                  : const Icon(Icons.list, color: Colors.white, size: 30),
+                    ),
             ),
           ),
           const SizedBox(width: 10),
@@ -64,7 +64,6 @@ class _ProductViewState extends State<ProductView> {
         top: false,
         child: Column(
           children: [
-            const SizedBox(height: 20),
             Expanded(
               child: isGridView
                   ? const ProductGridView()

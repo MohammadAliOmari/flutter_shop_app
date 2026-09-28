@@ -28,7 +28,10 @@ class ProductGridView extends StatelessWidget {
               arguments: products,
             );
           },
-          child: ProductGridItem(products: products),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: ProductGridItem(products: products),
+          ),
         );
       },
     );
