@@ -25,6 +25,13 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -42,7 +49,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       image: AssetImage('assets/images/shop_bag.png'),
                     ),
                   ),
-
                   const Text(
                     'ShopApp',
                     style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),

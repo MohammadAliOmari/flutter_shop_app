@@ -18,6 +18,12 @@ final GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
 class _ForgetPasswordState extends State<ForgetPassword> {
   @override
+  void dispose() {
+    email.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'Forgot Password', centerTitle: true),
